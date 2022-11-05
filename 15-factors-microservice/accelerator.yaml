@@ -49,15 +49,15 @@ engine:
     - type: ReplaceText
       substitutions:
       - text: ARTIFACT_NAME
-        with: "#artifactId"
+        with: "#artifactId.replace('-', '')"
       - text: com.example
         with: "#pkgName"
     - type: RewritePath
       regex: src/main/java/com/example/ARTIFACT_NAME/(.*)
-      rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #artifactId  + '/' + #g1"
+      rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #artifactId.replace('-', '')  + '/' + #g1"
     - type: RewritePath
       regex: src/test/java/com/example/ARTIFACT_NAME/(.*)
-      rewriteTo: "'src/test/java/' + #pkgName.replace('.', '/') + '/' + #artifactId  + '/' + #g1"
+      rewriteTo: "'src/test/java/' + #pkgName.replace('.', '/') + '/' + #artifactId.replace('-', '')  + '/' + #g1"
   - include: [ "pom.xml" ]
     chain:
       - type: ReplaceText
