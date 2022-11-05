@@ -13,7 +13,6 @@ class ApplicationTests {
 	@MockBean
   private JwtDecoder jwtDecoder;
 
-
 	@Test
 	void contextLoads() {
 	}
