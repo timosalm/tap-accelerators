@@ -11,6 +11,6 @@ public class HelloWorldResource {
 
   @GetMapping
   public ResponseEntity<String> helloWorld() {
-      return ResponseEntity.ok("Hello ARTIFACT_NAME");
+      return ResponseEntity.ok("Hello World");
   }
 }
