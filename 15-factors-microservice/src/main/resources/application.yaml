@@ -1,4 +1,3 @@
 spring:
   application.name: ARTIFACT_NAME # for config server
   config.import: "optional:configserver:"
-  security.oauth2.resourceserver.jwt.jwk-set-uri: ${spring.security.oauth2.client.provider.appsso.issuer-uri}/oauth2/jwks
