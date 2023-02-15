@@ -80,3 +80,9 @@ engine:
         with: "#javaVersion.toString()"
       - text: ARTIFACT_NAME
         with: "#artifactId"
+  - include: [ "Tiltfile" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: ARTIFACT_NAME
+        with: "#artifactId"
