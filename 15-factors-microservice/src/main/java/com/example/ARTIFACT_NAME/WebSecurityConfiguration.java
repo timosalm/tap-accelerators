@@ -16,9 +16,7 @@ class WebSecurityConfiguration {
         return http
                 .csrf().disable()
                 .authorizeHttpRequests(authorize -> authorize
-                        .mvcMatchers("/api/**").authenticated()
                         .anyRequest().permitAll()
-                )
-                .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt).build();
+                ).build();
     }
 }
