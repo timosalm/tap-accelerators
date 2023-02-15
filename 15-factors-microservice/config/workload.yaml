@@ -19,11 +19,6 @@ spec:
       apiVersion: services.apps.tanzu.vmware.com/v1alpha1
       kind: ResourceClaim
       name: configserver-binding-compatible
-  - name: auth-client
-    ref:
-      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-      kind: ResourceClaim
-      name: auth-client
   - name: observability
     ref:
       apiVersion: services.apps.tanzu.vmware.com/v1alpha1
