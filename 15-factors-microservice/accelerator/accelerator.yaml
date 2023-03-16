@@ -8,3 +8,10 @@ accelerator:
     - microservice
   imports:
     - name: new-service-fragment
+  engine:
+    chain:
+    - merge:
+      - type: InvokeFragment
+        reference: new-service-fragment
+      - include: [ "**" ]
+      onConflict: UseFirst
