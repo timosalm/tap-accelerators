@@ -70,7 +70,7 @@ engine:
       - text: NAMESPACE
         with: "#namespace"
       - text: JAVA_VERSION
-        with: "#javaVersion"
+        with: "'"' + #javaVersion + '"'"
       - text: ARTIFACT_NAME
         with: "#artifactId"
   - include: [ "Tiltfile" ]
