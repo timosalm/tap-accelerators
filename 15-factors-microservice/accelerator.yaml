@@ -11,7 +11,11 @@ accelerator:
   engine:
     chain:
     - merge:
+      - include: [ "**" ]
+        exclude: [ "accelerator.yaml" ]
       - type: InvokeFragment
         reference: new-service-fragment
-      - include: [ "**" ]
+      - type: RewritePath
+        regex: fragment/(.*)
+        rewriteTo: "#g1"
       onConflict: UseFirst
