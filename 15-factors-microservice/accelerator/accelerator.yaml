@@ -9,10 +9,8 @@ accelerator:
   imports:
     - name: new-service-fragment
   engine:
-    chain:
-    - merge:
-      - include: [ "**" ]
-      - type: InvokeFragment
-        reference: new-service-fragment
-      - include: [ "**" ]
-      onConflict: UseFirst
+    merge:
+    - include: [ "**/*" ]
+    - type: InvokeFragment
+      reference: new-service-fragment
+    onConflict: UseFirst
