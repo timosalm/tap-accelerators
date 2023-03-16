@@ -8,15 +8,3 @@ accelerator:
     - microservice
   imports:
     - name: new-service-fragment
-  engine:
-    chain:
-    - merge:
-      - include: [ "**" ]
-        exclude: [ "accelerator.yaml" ]
-      - type: InvokeFragment
-        reference: new-service-fragment
-      onConflict: UseFirst
-    - type: RewritePath
-      regex: fragment/(.*)
-      rewriteTo: "#g1"
-    - exclude: [ "accelerator.yaml" ]
