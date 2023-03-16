@@ -8,4 +8,4 @@ spec:
     ref:
       branch: main
     url: https://github.com/tsalm-pivotal/tap-accelerators.git
-    subPath: 15-factors-microservice
+    subPath: 15-factors-microservice/accelerator
