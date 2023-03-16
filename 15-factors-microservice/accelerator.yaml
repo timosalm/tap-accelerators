@@ -15,7 +15,8 @@ accelerator:
         exclude: [ "accelerator.yaml" ]
       - type: InvokeFragment
         reference: new-service-fragment
-      - type: RewritePath
-        regex: fragment/(.*)
-        rewriteTo: "#g1"
       onConflict: UseFirst
+    - type: RewritePath
+      regex: fragment/(.*)
+      rewriteTo: "#g1"
+    - exclude: [ "accelerator.yaml" ]
