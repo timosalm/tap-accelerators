@@ -1,11 +1,11 @@
 apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
-kind: Accelerator
+kind: Fragment
 metadata:
-  name: new-service
+  name: new-service-fragment
   namespace: accelerator-system
 spec:
   git:
     ref:
       branch: main
     url: https://github.com/tsalm-pivotal/tap-accelerators.git
-    subPath: 15-factors-microservice
+    subPath: 15-factors-microservice/fragment
