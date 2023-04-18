@@ -10,7 +10,7 @@ metadata:
 spec:
   source:
     git:
-      url: https://github.com/tsalm-pivotal/ARTIFACT_NAME.git
+      url: https://github.com/tsalm-vmware/ARTIFACT_NAME.git
       ref:
         branch: main
   serviceClaims:
